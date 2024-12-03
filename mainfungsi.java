@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class mainfungsi {
+    static String DataMhs[][] = new String[300][4];
+    static int sks[] = new int[300];
+    static int i = 0;
+    static int krsMhs = 0;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
