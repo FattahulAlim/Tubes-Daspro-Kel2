@@ -104,21 +104,21 @@ public class mainfungsi {
     static void Outputan() {
         Scanner sc = new Scanner(System.in);
 
-        String key;
+        String NIM;
         int total = 0;
 
         System.out.println();
         System.out.println("--- Tampilkan daftar KRS Mahasiswa ---");
         System.out.println("Tampilkan daftar nilai Mahasiswa");
         System.out.print("Masukkan NIM Mahasiswa: ");
-        key = sc.nextLine();
+        NIM = sc.nextLine();
 
         System.out.println("Daftar KRS: ");
         System.out.println("NIM\tNama\tKode MK\t\tNama Mata Kuliah\tSKS");
 
         for (int a = 0; a < DataMhs.length; a++) {
             for (int j = 0; j < DataMhs[0].length; j++) {
-                if (key.equalsIgnoreCase(DataMhs[a][j])) {
+                if (NIM.equalsIgnoreCase(DataMhs[a][j])) {
                     System.out.println(DataMhs[a][j] + "\t" + DataMhs[a][j-1] + "\t" + DataMhs[a][j+1] + "\t\t" + DataMhs[a][j+2] + "\t\t\t" + sks[a]);
                     total+=sks[a];
                 }
