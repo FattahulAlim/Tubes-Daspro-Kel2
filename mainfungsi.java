@@ -35,6 +35,7 @@ public class mainfungsi {
                 case 4 :
                     System.out.println("Terima Kasih!");
                     kondisi = false;
+                    break;
                 default:
                     break;
             }
