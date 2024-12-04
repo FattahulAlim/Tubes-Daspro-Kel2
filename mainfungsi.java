@@ -1,3 +1,4 @@
+import java.lang.classfile.instruction.StoreInstruction;
 import java.util.Scanner;
 
 public class mainfungsi {
@@ -26,7 +27,7 @@ public class mainfungsi {
                     i++;
                     break;
                 case 2 :
-                    outputan();
+                    Outputan();
                     break;
                 case 3 :
                     data();
@@ -98,5 +99,36 @@ public class mainfungsi {
         } if (total <= 20) {
             krsMhs++;
         } System.out.println("Total sks yang diambil: " + total);
+    }
+
+    static void Outputan() {
+        Scanner sc = new Scanner(System.in);
+
+        String key;
+        int total = 0;
+
+        System.out.println();
+        System.out.println("--- Tampilkan daftar KRS Mahasiswa ---");
+        System.out.println("Tampilkan daftar nilai Mahasiswa");
+        System.out.print("Masukkan NIM Mahasiswa: ");
+        key = sc.nextLine();
+
+        System.out.println("Daftar KRS: ");
+        System.out.println("NIM\tNama\tKode MK\t\tNama Mata Kuliah\tSKS");
+
+        for (int a = 0; a < DataMhs.length; a++) {
+            for (int j = 0; j < DataMhs[0].length; j++) {
+                if (key.equalsIgnoreCase(DataMhs[a][j])) {
+                    System.out.println(DataMhs[a][j] + "\t" + DataMhs[a][j-1] + "\t" + DataMhs[a][j+1] + "\t\t" + DataMhs[a][j+2] + "\t\t\t" + sks[a]);
+                    total+=sks[a];
+                }
+            }
+        } System.out.println("Total SKS: " + total);
+    }
+
+    static void data() {
+        System.out.println();
+        System.out.println("--- Analisis data KRS ---");
+        System.out.println("jumlah mahasiswa yang mengambil kurang dari 20: " + krsMhs);
     }
 }
