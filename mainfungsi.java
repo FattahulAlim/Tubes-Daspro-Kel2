@@ -12,7 +12,7 @@ public class mainfungsi {
         int operasi;
         boolean kondisi = true;
 
-        while(true) {
+        while(kondisi) {
             System.out.println("=== Sistem Pemantauan KRS Mahasiswa ===");
             System.out.println("1. Tambah data KRS");
             System.out.println("2. Tampilkan daftar KRS mahasiswa");
