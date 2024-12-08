@@ -26,8 +26,8 @@ public class invers2 {
         System.out.println("matriks invers: ");
         double determinan = (matriks[0][0] * matriks[1][1]) - (matriks[1][0] * matriks[0][1]);
 
-        for (int i = 1; i >= 0; i--) {
-            for (int j = 1; j >= 0; j--) {
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
                 hasil[i][j] = matriks[i][j] * (1 / determinan);
             }
         }
