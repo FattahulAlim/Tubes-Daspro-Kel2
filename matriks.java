@@ -231,6 +231,10 @@ public class matriks {
 
         System.out.println("matriks invers: ");
         double determinan = (matriks[0][0] * matriks[1][1]) - (matriks[1][0] * matriks[0][1]);
+        if (determinan == 0) {
+            System.out.println("Matriks tidak memiliki invers");
+            return;
+        }
 
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
@@ -268,6 +272,10 @@ public class matriks {
         determinan = matriks[0][0] * (matriks[1][1] * matriks[2][2] - matriks[1][2] * matriks[2][1]) -
                      matriks[0][1] * (matriks[1][0] * matriks[2][2] - matriks[1][2] * matriks[2][0]) +
                      matriks[0][2] * (matriks[1][0] * matriks[2][1] - matriks[1][1] * matriks[2][0]);
+        if (determinan == 0) {
+            System.out.println("Matriks tidak memiliki invers");
+            return;
+        }
         
         adjoint[0][0] = (matriks[1][1] * matriks[2][2]) - (matriks[1][2] * matriks[2][1]);
         adjoint[0][1] = -1 * ((matriks[1][0] * matriks[2][2]) - (matriks[1][2] * matriks[2][0]));
